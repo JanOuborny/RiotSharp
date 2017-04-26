@@ -22,7 +22,7 @@ namespace RiotSharpExample
             int gameId = int.Parse(ConfigurationManager.AppSettings["GameId"]);
             Region region = (Region)Enum.Parse(typeof(Region), ConfigurationManager.AppSettings["Region"]);
 
-            var mastery = staticApi.GetMastery(Region.euw, 6111, MasteryData.all);
+            var mastery = staticApi.GetMastery(Region.euw, 6111, MasteryData.All);
 
             var languages = staticApi.GetLanguages(region);
 

@@ -26,7 +26,7 @@ namespace RiotSharp
         /// <param name="championData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A ChampionListStatic object containing all champions.</returns>
-        ChampionListStatic GetChampions(Region region, ChampionData championData = ChampionData.basic,
+        ChampionListStatic GetChampions(Region region, ChampionData championData = ChampionData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A ChampionListStatic object containing all champions.</returns>
         Task<ChampionListStatic> GetChampionsAsync(Region region,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US);
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a champion synchronously.
@@ -48,7 +48,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A champion.</returns>
         ChampionStatic GetChampion(Region region, int championId,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US);
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a champion asynchronously.
@@ -59,7 +59,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A champion.</returns>
         Task<ChampionStatic> GetChampionAsync(Region region, int championId,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US);
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a list of all items synchronously.
@@ -68,7 +68,7 @@ namespace RiotSharp
         /// <param name="itemData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An ItemListStatic object containing all items.</returns>
-        ItemListStatic GetItems(Region region, ItemData itemData = ItemData.basic,
+        ItemListStatic GetItems(Region region, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace RiotSharp
         /// <param name="itemData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An ItemListStatic object containing all items.</returns>
-        Task<ItemListStatic> GetItemsAsync(Region region, ItemData itemData = ItemData.basic,
+        Task<ItemListStatic> GetItemsAsync(Region region, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace RiotSharp
         /// <param name="itemData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An item.</returns>
-        ItemStatic GetItem(Region region, int itemId, ItemData itemData = ItemData.basic,
+        ItemStatic GetItem(Region region, int itemId, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace RiotSharp
         /// <param name="itemData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An item.</returns>
-        Task<ItemStatic> GetItemAsync(Region region, int itemId, ItemData itemData = ItemData.basic,
+        Task<ItemStatic> GetItemAsync(Region region, int itemId, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace RiotSharp
         /// <param name="masteryData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An MasteryListStatic object containing all masteries.</returns>
-        MasteryListStatic GetMasteries(Region region, MasteryData masteryData = MasteryData.basic,
+        MasteryListStatic GetMasteries(Region region, MasteryData masteryData = MasteryData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>An MasteryListStatic object containing all masteries.</returns>
         Task<MasteryListStatic> GetMasteriesAsync(Region region,
-            MasteryData masteryData = MasteryData.basic, Language language = Language.en_US);
+            MasteryData masteryData = MasteryData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a mastery synchronously.
@@ -184,7 +184,7 @@ namespace RiotSharp
         /// <param name="masteryData">Data to retrieve.</param>
         /// <param name="language">Language of th data to be retrieved.</param>
         /// <returns>A mastery.</returns>
-        MasteryStatic GetMastery(Region region, int masteryId, MasteryData masteryData = MasteryData.basic,
+        MasteryStatic GetMastery(Region region, int masteryId, MasteryData masteryData = MasteryData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace RiotSharp
         /// <param name="language">Language of th data to be retrieved.</param>
         /// <returns>A mastery.</returns>
         Task<MasteryStatic> GetMasteryAsync(Region region, int masteryId,
-            MasteryData masteryData = MasteryData.basic, Language language = Language.en_US);
+            MasteryData masteryData = MasteryData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Retrieve realm data synchronously.
@@ -219,7 +219,7 @@ namespace RiotSharp
         /// <param name="runeData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A RuneListStatic object containing all runes.</returns>
-        RuneListStatic GetRunes(Region region, RuneData runeData = RuneData.basic
+        RuneListStatic GetRunes(Region region, RuneData runeData = RuneData.Basic
             , Language language = Language.en_US);
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace RiotSharp
         /// <param name="runeData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A RuneListStatic object containing all runes.</returns>
-        Task<RuneListStatic> GetRunesAsync(Region region, RuneData runeData = RuneData.basic,
+        Task<RuneListStatic> GetRunesAsync(Region region, RuneData runeData = RuneData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace RiotSharp
         /// <param name="runeData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A rune.</returns>
-        RuneStatic GetRune(Region region, int runeId, RuneData runeData = RuneData.basic,
+        RuneStatic GetRune(Region region, int runeId, RuneData runeData = RuneData.Basic,
             Language language = Language.en_US);
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace RiotSharp
         /// <param name="runeData">Data to retrieve.</param>
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A rune.</returns>
-        Task<RuneStatic> GetRuneAsync(Region region, int runeId, RuneData runeData = RuneData.basic,
+        Task<RuneStatic> GetRuneAsync(Region region, int runeId, RuneData runeData = RuneData.Basic,
            Language language = Language.en_US);
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A SummonerSpellListStatic object containing all summoner spells.</returns>
         SummonerSpellListStatic GetSummonerSpells(Region region,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US);
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a list of all summoner spells asynchronously.
@@ -272,7 +272,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A SummonerSpellListStatic object containing all summoner spells.</returns>
         Task<SummonerSpellListStatic> GetSummonerSpellsAsync(Region region,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US);
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a summoner spell synchronously.
@@ -283,7 +283,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A summoner spell.</returns>
         SummonerSpellStatic GetSummonerSpell(Region region, SummonerSpell summonerSpell,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US);
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Get a summoner spell asynchronously.
@@ -294,7 +294,7 @@ namespace RiotSharp
         /// <param name="language">Language of the data to be retrieved.</param>
         /// <returns>A summoner spell.</returns>
         Task<SummonerSpellStatic> GetSummonerSpellAsync(Region region, SummonerSpell summonerSpell,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US);
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US);
 
         /// <summary>
         /// Retrieve static api version data synchronously.

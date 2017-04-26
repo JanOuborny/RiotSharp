@@ -99,7 +99,7 @@ namespace RiotSharp
             cache = new Cache();
         }
      
-        public ChampionListStatic GetChampions(Region region, ChampionData championData = ChampionData.basic,
+        public ChampionListStatic GetChampions(Region region, ChampionData championData = ChampionData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ChampionListStaticWrapper>(ChampionsCacheKey);
@@ -110,7 +110,7 @@ namespace RiotSharp
                     RootDomain,
                     new List<string> {
                         string.Format("locale={0}", language.ToString()),
-                        championData == ChampionData.basic ?
+                        championData == ChampionData.Basic ?
                         string.Empty :
                         string.Format("champData={0}", championData.ToString())
                     });
@@ -122,7 +122,7 @@ namespace RiotSharp
         }
     
         public async Task<ChampionListStatic> GetChampionsAsync(Region region,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US)
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ChampionListStaticWrapper>(ChampionsCacheKey);
             if (wrapper != null && language == wrapper.Language && championData == wrapper.ChampionData)
@@ -135,7 +135,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    championData == ChampionData.basic ?
+                    championData == ChampionData.Basic ?
                         string.Empty :
                         string.Format("champData={0}", championData.ToString())
                 });
@@ -147,7 +147,7 @@ namespace RiotSharp
         }
      
         public ChampionStatic GetChampion(Region region, int championId,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US)
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ChampionStaticWrapper>(ChampionCacheKey + championId);
             if (wrapper != null && wrapper.Language == language && wrapper.ChampionData == championData)
@@ -170,7 +170,7 @@ namespace RiotSharp
                         new List<string>
                         {
                             string.Format("locale={0}", language.ToString()),
-                            championData == ChampionData.basic ?
+                            championData == ChampionData.Basic ?
                             string.Empty :
                             string.Format("champData={0}", championData.ToString())
                         });
@@ -183,7 +183,7 @@ namespace RiotSharp
         }
      
         public async Task<ChampionStatic> GetChampionAsync(Region region, int championId,
-            ChampionData championData = ChampionData.basic, Language language = Language.en_US)
+            ChampionData championData = ChampionData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ChampionStaticWrapper>(ChampionCacheKey + championId);
             if (wrapper != null && wrapper.Language == language && wrapper.ChampionData == championData)
@@ -202,7 +202,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    championData == ChampionData.basic ?
+                    championData == ChampionData.Basic ?
                         string.Empty :
                         string.Format("champData={0}", championData.ToString())
                 });
@@ -213,7 +213,7 @@ namespace RiotSharp
             return champ;
         }
      
-        public ItemListStatic GetItems(Region region, ItemData itemData = ItemData.basic,
+        public ItemListStatic GetItems(Region region, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ItemListStaticWrapper>(ItemsCacheKey);
@@ -225,7 +225,7 @@ namespace RiotSharp
                     new List<string>
                     {
                         string.Format("locale={0}", language.ToString()),
-                        itemData == ItemData.basic ?
+                        itemData == ItemData.Basic ?
                         string.Empty :
                         string.Format("itemListData={0}", itemData.ToString())
                     });
@@ -236,7 +236,7 @@ namespace RiotSharp
             return wrapper.ItemListStatic;
         }
   
-        public async Task<ItemListStatic> GetItemsAsync(Region region, ItemData itemData = ItemData.basic,
+        public async Task<ItemListStatic> GetItemsAsync(Region region, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ItemListStaticWrapper>(ItemsCacheKey);
@@ -250,7 +250,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    itemData == ItemData.basic ?
+                    itemData == ItemData.Basic ?
                         string.Empty :
                         string.Format("itemListData={0}", itemData.ToString())
                 });
@@ -261,7 +261,7 @@ namespace RiotSharp
             return wrapper.ItemListStatic;
         }
     
-        public ItemStatic GetItem(Region region, int itemId, ItemData itemData = ItemData.basic,
+        public ItemStatic GetItem(Region region, int itemId, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ItemStaticWrapper>(ItemCacheKey + itemId);
@@ -291,7 +291,7 @@ namespace RiotSharp
                         new List<string>
                         {
                             string.Format("locale={0}", language.ToString()),
-                            itemData == ItemData.basic ?
+                            itemData == ItemData.Basic ?
                             string.Empty :
                             string.Format("itemData={0}", itemData.ToString())
                         });
@@ -303,7 +303,7 @@ namespace RiotSharp
             }
         }
   
-        public async Task<ItemStatic> GetItemAsync(Region region, int itemId, ItemData itemData = ItemData.basic,
+        public async Task<ItemStatic> GetItemAsync(Region region, int itemId, ItemData itemData = ItemData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, ItemStaticWrapper>(ItemCacheKey + itemId);
@@ -323,7 +323,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    itemData == ItemData.basic ?
+                    itemData == ItemData.Basic ?
                         string.Empty :
                         string.Format("itemData={0}", itemData.ToString())
                 });
@@ -454,7 +454,7 @@ namespace RiotSharp
             return maps.Data.Values.ToList();
         }
    
-        public MasteryListStatic GetMasteries(Region region, MasteryData masteryData = MasteryData.basic,
+        public MasteryListStatic GetMasteries(Region region, MasteryData masteryData = MasteryData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, MasteryListStaticWrapper>(MasteriesCacheKey);
@@ -466,7 +466,7 @@ namespace RiotSharp
                     new List<string>
                     {
                         string.Format("locale={0}", language.ToString()),
-                        masteryData == MasteryData.basic ?
+                        masteryData == MasteryData.Basic ?
                         string.Empty :
                         string.Format("masteryListData={0}", masteryData.ToString())
                     });
@@ -478,7 +478,7 @@ namespace RiotSharp
         }
       
         public async Task<MasteryListStatic> GetMasteriesAsync(Region region,
-            MasteryData masteryData = MasteryData.basic, Language language = Language.en_US)
+            MasteryData masteryData = MasteryData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, MasteryListStaticWrapper>(MasteriesCacheKey);
             if (wrapper != null && language == wrapper.Language && masteryData == wrapper.MasteryData)
@@ -491,7 +491,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    masteryData == MasteryData.basic ?
+                    masteryData == MasteryData.Basic ?
                         string.Empty :
                         string.Format("masteryListData={0}", masteryData.ToString())
                 });
@@ -502,7 +502,7 @@ namespace RiotSharp
             return wrapper.MasteryListStatic;
         }
       
-        public MasteryStatic GetMastery(Region region, int masteryId, MasteryData masteryData = MasteryData.basic,
+        public MasteryStatic GetMastery(Region region, int masteryId, MasteryData masteryData = MasteryData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, MasteryStaticWrapper>(MasteryCacheKey + masteryId);
@@ -532,7 +532,7 @@ namespace RiotSharp
                         new List<string>
                         {
                             string.Format("locale={0}", language.ToString()),
-                            masteryData == MasteryData.basic ?
+                            masteryData == MasteryData.Basic ?
                             string.Empty :
                             string.Format("masteryData={0}", masteryData.ToString())
                         });
@@ -545,7 +545,7 @@ namespace RiotSharp
         }
   
         public async Task<MasteryStatic> GetMasteryAsync(Region region, int masteryId,
-            MasteryData masteryData = MasteryData.basic, Language language = Language.en_US)
+            MasteryData masteryData = MasteryData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, MasteryStaticWrapper>(MasteryCacheKey + masteryId);
             if (wrapper != null && wrapper.Language == language && wrapper.MasteryData == masteryData)
@@ -563,7 +563,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    masteryData == MasteryData.basic ?
+                    masteryData == MasteryData.Basic ?
                         string.Empty :
                         string.Format("masteryData={0}", masteryData.ToString())
                 });
@@ -606,7 +606,7 @@ namespace RiotSharp
             return realm;
         }
     
-        public RuneListStatic GetRunes(Region region, RuneData runeData = RuneData.basic
+        public RuneListStatic GetRunes(Region region, RuneData runeData = RuneData.Basic
             , Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, RuneListStaticWrapper>(RunesCacheKey);
@@ -618,7 +618,7 @@ namespace RiotSharp
                     new List<string>
                     {
                         string.Format("locale={0}", language.ToString()),
-                        runeData == RuneData.basic ?
+                        runeData == RuneData.Basic ?
                         string.Empty :
                         string.Format("runeListData={0}", runeData.ToString())
                     });
@@ -629,7 +629,7 @@ namespace RiotSharp
             return wrapper.RuneListStatic;
         }
      
-        public async Task<RuneListStatic> GetRunesAsync(Region region, RuneData runeData = RuneData.basic,
+        public async Task<RuneListStatic> GetRunesAsync(Region region, RuneData runeData = RuneData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, RuneListStaticWrapper>(RunesCacheKey);
@@ -643,7 +643,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    runeData == RuneData.basic ?
+                    runeData == RuneData.Basic ?
                         string.Empty :
                         string.Format("runeListData={0}", runeData.ToString())
                 });
@@ -654,11 +654,11 @@ namespace RiotSharp
             return wrapper.RuneListStatic;
         }
      
-        public RuneStatic GetRune(Region region, int runeId, RuneData runeData = RuneData.basic,
+        public RuneStatic GetRune(Region region, int runeId, RuneData runeData = RuneData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, RuneStaticWrapper>(RuneCacheKey + runeId);
-            if (wrapper != null && wrapper.Language == language && wrapper.RuneData == RuneData.all)
+            if (wrapper != null && wrapper.Language == language && wrapper.RuneData == RuneData.All)
             {
                 return wrapper.RuneStatic;
             }
@@ -684,7 +684,7 @@ namespace RiotSharp
                         new List<string>
                         {
                             string.Format("locale={0}", language.ToString()),
-                            runeData == RuneData.basic ?
+                            runeData == RuneData.Basic ?
                             string.Empty :
                             string.Format("runeData={0}", runeData.ToString())
                         });
@@ -696,11 +696,11 @@ namespace RiotSharp
             }
         }
 
-        public async Task<RuneStatic> GetRuneAsync(Region region, int runeId, RuneData runeData = RuneData.basic,
+        public async Task<RuneStatic> GetRuneAsync(Region region, int runeId, RuneData runeData = RuneData.Basic,
             Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, RuneStaticWrapper>(RuneCacheKey + runeId);
-            if (wrapper != null && wrapper.Language == language && wrapper.RuneData == RuneData.all)
+            if (wrapper != null && wrapper.Language == language && wrapper.RuneData == RuneData.All)
             {
                 return wrapper.RuneStatic;
             }
@@ -716,7 +716,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    runeData == RuneData.basic ?
+                    runeData == RuneData.Basic ?
                         string.Empty :
                         string.Format("runeData={0}", runeData.ToString())
                 });
@@ -727,7 +727,7 @@ namespace RiotSharp
         }
      
         public SummonerSpellListStatic GetSummonerSpells(Region region,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US)
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, SummonerSpellListStaticWrapper>(SummonerSpellsCacheKey);
             if (wrapper == null || wrapper.Language != language || wrapper.SummonerSpellData != summonerSpellData)
@@ -738,7 +738,7 @@ namespace RiotSharp
                     new List<string>
                     {
                         string.Format("locale={0}", language.ToString()),
-                        summonerSpellData == SummonerSpellData.basic ?
+                        summonerSpellData == SummonerSpellData.Basic ?
                         string.Empty :
                         string.Format("spellData={0}", summonerSpellData.ToString())
                     });
@@ -750,7 +750,7 @@ namespace RiotSharp
         }
  
         public async Task<SummonerSpellListStatic> GetSummonerSpellsAsync(Region region,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US)
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, SummonerSpellListStaticWrapper>(SummonerSpellsCacheKey);
             if (wrapper != null && wrapper.Language == language && wrapper.SummonerSpellData == summonerSpellData)
@@ -763,7 +763,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    summonerSpellData == SummonerSpellData.basic ?
+                    summonerSpellData == SummonerSpellData.Basic ?
                         string.Empty :
                         string.Format("spellData={0}", summonerSpellData.ToString())
                 });
@@ -775,7 +775,7 @@ namespace RiotSharp
         }
     
         public SummonerSpellStatic GetSummonerSpell(Region region, SummonerSpell summonerSpell,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US)
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, SummonerSpellStaticWrapper>(
                 SummonerSpellCacheKey + summonerSpell.ToCustomString());
@@ -807,7 +807,7 @@ namespace RiotSharp
                         new List<string>
                         {
                             string.Format("locale={0}", language.ToString()),
-                            summonerSpellData == SummonerSpellData.basic ?
+                            summonerSpellData == SummonerSpellData.Basic ?
                             string.Empty :
                             string.Format("spellData={0}", summonerSpellData.ToString())
                         });
@@ -820,7 +820,7 @@ namespace RiotSharp
         }
       
         public async Task<SummonerSpellStatic> GetSummonerSpellAsync(Region region, SummonerSpell summonerSpell,
-            SummonerSpellData summonerSpellData = SummonerSpellData.basic, Language language = Language.en_US)
+            SummonerSpellData summonerSpellData = SummonerSpellData.Basic, Language language = Language.en_US)
         {
             var wrapper = cache.Get<string, SummonerSpellStaticWrapper>(
                 SummonerSpellCacheKey + summonerSpell.ToCustomString());
@@ -842,7 +842,7 @@ namespace RiotSharp
                 new List<string>
                 {
                     string.Format("locale={0}", language.ToString()),
-                    summonerSpellData == SummonerSpellData.basic ?
+                    summonerSpellData == SummonerSpellData.Basic ?
                         string.Empty :
                         string.Format("spellData={0}", summonerSpellData.ToString())
                 });
